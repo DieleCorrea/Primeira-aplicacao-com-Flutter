@@ -7,60 +7,48 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-       
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 190, 38, 114)),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 224, 217, 221)),
         useMaterial3: true,
       ),
-      home: Container(),
-    );
-  }
-}
-
-
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-   
-    return Scaffold(
-      appBar: AppBar(
-      
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
+      home: Container(
         
         child: Column(
-         
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Stack(
+                alignment: AlignmentDirectional.center,
+                children: [
+                  Container(color: Colors.pink,width: 100,height: 100,),
+                  Container(color: Colors.blue,width: 50,height: 50,),
+                ],
+              ),
+              Stack(
+                alignment: AlignmentDirectional.center,
+                children: [
+                  Container(color: Colors.blue,width: 100,height: 100,),
+                  Container(color: Colors.pink,width: 50,height: 50,),
+                  ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                 Container(color: Colors.cyan,width: 50,height: 50,),
+                 Container(color: Colors.pinkAccent,width: 50,height: 50,),
+                 Container(color: Colors.purple,width: 50,height: 50,),
+                ],
+              )
+            ],
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      )
+          
     );
   }
 }
