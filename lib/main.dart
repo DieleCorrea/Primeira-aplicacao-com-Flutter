@@ -17,17 +17,17 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: Container(
-          color: Colors.white,
+          color: const Color.fromARGB(255, 91, 151, 199),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Stack(
-                alignment: AlignmentDirectional.center,
+                alignment: AlignmentDirectional.centerStart,
                 children: [
                   Container(
                     color: Colors.pink,
-                    width: 100,
+                    width: 500,
                     height: 100,
                   ),
                   Container(
@@ -37,16 +37,25 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               ),
+              Container(
+                color: Colors.white,
+                width: 500,
+                height: 100,
+                child: Text(
+                    'aaaaaaa',
+                    style: ,
+                ),
+              ),
               Stack(
-                alignment: AlignmentDirectional.center,
+                alignment: AlignmentDirectional.centerStart,
                 children: [
                   Container(
-                    color: Colors.blue,
-                    width: 100,
+                    color: Colors.pink,
+                    width: 500,
                     height: 100,
                   ),
                   Container(
-                    color: Colors.pink,
+                    color: Colors.blue,
                     width: 50,
                     height: 50,
                   ),
@@ -57,17 +66,17 @@ class MyApp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    color: Colors.cyan,
+                    color: Colors.black,
                     width: 50,
                     height: 50,
                   ),
                   Container(
-                    color: Colors.pinkAccent,
+                    color: Colors.pink,
                     width: 50,
                     height: 50,
                   ),
                   Container(
-                    color: Colors.purple,
+                    color: Colors.black,
                     width: 50,
                     height: 50,
                   ),
@@ -78,15 +87,15 @@ class MyApp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(color: Colors.black,width: 60,height: 60,),
-                  Container(color: Colors.red, width: 20, height: 25,),
-                  Container(color: Colors.pinkAccent, width: 20,height: 25,),
+                  Container(color: Colors.pink, width: 200, height: 60,),
+                  Container(color: Colors.black, width: 60,height: 60,),
                 ],
               ),
-              Container(
-                color: Colors.amber,
+              Container(//texto
+                color: Color.fromARGB(255, 219, 150, 174),
                 width: 300,
                 height: 30,
-                //Inserir trexto crio um filho widget chamado text
+                //Inserir texto crio um filho widget chamado text
                 child: Text(
                   'Diamante amarelo',
                   style: TextStyle(//estilo do texto 
@@ -102,6 +111,7 @@ class MyApp extends StatelessWidget {
                 }, 
                 
                 child: Text('Aperte o botão'),),
+
             ],
           ),
         ));
