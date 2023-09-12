@@ -57,7 +57,7 @@ class Task extends StatelessWidget {
                       height: 140,
                     ),
                     Container(
-                      color: Colors.white30,
+                      color: Colors.white,
                       height: 100,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
