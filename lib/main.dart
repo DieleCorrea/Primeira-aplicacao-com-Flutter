@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
           ),
           body: ListView(
             children: [
-              Task('Estudar hoje a noite no liberato aquela aula chata de gestão'),
+              Task(
+                  'Estudar hoje a noite no liberato aquela aula chata de gestão'),
               Task('Academia'),
               Task('Janta'),
               Task('Ingles'),
@@ -38,45 +39,69 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Task extends StatelessWidget {
+class Task extends StatefulWidget {
   final String nome; //criei essa váriavel
-  const Task(this.nome, {super.key}); //this.nome eu instancieie
+  const Task(this.nome, {super.key}); 
+  @override
+  State<Task> createState() => _TaskState();
+}
 
+class _TaskState extends State<Task> {
+ int nivel = 0;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-        child: Container(
-          child: Stack(
-            children: [
-              Container(
-                color: Colors.blue,
-                height: 140,
-              ),
-              Container(
-                color: Color.fromARGB(255, 190, 148, 179),
-                height: 100,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      color: Colors.black26,width: 72,height: 100,),
-                    Container(
-                      width: 200,child: 
-                      Text(nome, style: TextStyle(fontSize: 24,overflow: TextOverflow.ellipsis),)
-                      ), 
-                    ElevatedButton(
-                        onPressed: () {}, child: Icon(Icons.arrow_drop_up))
-                     ],
+      child: Container(
+        child: Stack(
+          children: [
+            Container(
+              color: Colors.blue,
+              height: 140,
+            ),
+            Column(
+              children: [
+                Container(
+                  color: Color.fromARGB(255, 190, 148, 179),
+                  height: 100,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        color: Colors.black26,
+                        width: 72,
+                        height: 100,
+                      ),
+                      Container(
+                          width: 200,
+                          child: Text(
+                            widget.nome,
+                            style: TextStyle(
+                                fontSize: 24, overflow: TextOverflow.ellipsis),
+                          )),
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                            nivel++;  
+                            });
+                            
+                          },
+                          child: Icon(Icons.arrow_drop_up))
+                    ],
+                  ),
                 ),
-              )
-              Text('nivel: 0'),
-
-
-
-            ],
-          ),
+                Text(
+                  'nivel: $nivel',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
+      ),
     );
   }
 }
