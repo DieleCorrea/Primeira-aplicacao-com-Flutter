@@ -41,13 +41,13 @@ class MyApp extends StatelessWidget {
 
 class Task extends StatefulWidget {
   final String nome; //criei essa váriavel
-  const Task(this.nome, {super.key}); 
+  const Task(this.nome, {super.key});
   @override
   State<Task> createState() => _TaskState();
 }
 
 class _TaskState extends State<Task> {
- int nivel = 0;
+  int nivel = 0;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -82,21 +82,29 @@ class _TaskState extends State<Task> {
                       ElevatedButton(
                           onPressed: () {
                             setState(() {
-                            nivel++;  
+                              nivel++;
                             });
-                            
                           },
                           child: Icon(Icons.arrow_drop_up))
                     ],
                   ),
                 ),
-                Text(
-                  'nivel: $nivel',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                  ),
+                Row(
+                  children: [
+                    Container(
+                      child: LinearProgressIndicator(),
+                      width: 200,
+                    ),
+                    Text(
+                      'nivel: $nivel',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
                 ),
+                LinearProgressIndicator()
               ],
             ),
           ],
