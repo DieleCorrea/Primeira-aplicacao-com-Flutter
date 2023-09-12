@@ -90,6 +90,7 @@ class _TaskState extends State<Task> {
                   ),
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       child: LinearProgressIndicator(
@@ -107,7 +108,6 @@ class _TaskState extends State<Task> {
                     ),
                   ],
                 ),
-                LinearProgressIndicator()
               ],
             ),
           ],
