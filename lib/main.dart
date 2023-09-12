@@ -102,11 +102,14 @@ class _TaskState extends State<Task> {
                         width: 150,
                       ),
                     ),
-                    Text(
-                      'nivel: $nivel',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'nivel: $nivel',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
                       ),
                     ),
                   ],
