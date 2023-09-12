@@ -92,12 +92,15 @@ class _TaskState extends State<Task> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      child: LinearProgressIndicator(
-                        color: Colors.white,
-                        value: nivel/10,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        child: LinearProgressIndicator(
+                          color: Colors.white,
+                          value: nivel/10,
+                        ),
+                        width: 150,
                       ),
-                      width: 150,
                     ),
                     Text(
                       'nivel: $nivel',
