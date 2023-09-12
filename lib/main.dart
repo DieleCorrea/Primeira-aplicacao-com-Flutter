@@ -92,12 +92,11 @@ class _TaskState extends State<Task> {
                 Row(
                   children: [
                     Container(
-                      width: 200,
                       child: LinearProgressIndicator(
                         color: Colors.white,
                         value: nivel/10,
                       ),
-                      
+                      width: 150,
                     ),
                     Text(
                       'nivel: $nivel',
