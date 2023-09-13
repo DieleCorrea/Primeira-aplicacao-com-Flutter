@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
           appBar: AppBar(
+            leading: Container(),
             title: Text('Tarefas'),
           ),
           body: ListView(
@@ -85,7 +86,14 @@ class _TaskState extends State<Task> {
                               nivel++;
                             });
                           },
-                          child: Icon(Icons.arrow_drop_up))
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                            Icon(Icons.arrow_drop_up),
+                            Text('up', style: TextStyle(fontSize: 12),),
+                          ],
+                          )),
                     ],
                   ),
                 ),
