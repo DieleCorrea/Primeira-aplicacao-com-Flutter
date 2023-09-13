@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:segundoapp/revisao.dart';
 
+// void main() {
+//   runApp(const MyApp());
+// }
 void main() {
-  runApp(const MyApp());
-}
-
+  runApp(revisao());
+} 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
