@@ -104,7 +104,7 @@ class _TaskState extends State<Task> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         child: LinearProgressIndicator(
-                          color: Colors.white,
+                          color: Colors.red,
                           value: nivel/10,
                         ),
                         width: 150,
