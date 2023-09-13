@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class revisao extends StatelessWidget {
-  const revisao({super.key});
+  const revisao({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,22 +25,41 @@ class revisao extends StatelessWidget {
                 color: Color.fromARGB(255, 134, 63, 156),
                 height: 600,
                 width: 500,
-                //child: Text(),
-
-                child: Stack(
-                  alignment: Alignment.center,
+                child: Column(
                   children: [
-                    Container(
-                      alignment: Alignment.topCenter,
-                      color: const Color.fromARGB(255, 198, 109, 139),
-                      height: 200,
-                      width: 300,
-                    ),
+                        Container(
+                          color: const Color.fromARGB(255, 198, 109, 139),
+                          height: 200,
+                          width: 300,
+                          child: Text(
+                            'augdiuagsduiad',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        ElevatedButton(onPressed: (){},
+                        child: Text('aperte') ,)
                   ],
                 ),
               ),
             ],
           ),
         ));
+  }
+}
+
+class tarefa extends StatefulWidget {
+  const tarefa({super.key});
+
+  @override
+  State<tarefa> createState() => _tarefaState();
+}
+
+class _tarefaState extends State<tarefa> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
