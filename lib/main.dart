@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:segundoapp/revisao.dart';
+//import 'package:segundoapp/revisao.dart';
 
 void main() {
   runApp(const MyApp());
@@ -71,11 +71,21 @@ class _TaskState extends State<Task> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+
+
+
+                      
                       Container(
                         color: Colors.black26,
                         width: 72,
                         height: 100,
+                        child: Image.network('https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
+                        /**Nosso image.network tem esse parametro --SRC-- que é uma String onde colocamos 
+                         * a URL. Ele é um parametro OBRIGATÓRIO. Sem ele não há imagem. */
                       ),
+
+
+
                       Container(
                           width: 200,
                           child: Text(
