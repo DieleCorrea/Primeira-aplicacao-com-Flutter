@@ -27,13 +27,14 @@ class MyApp extends StatelessWidget {
           body: ListView(
             children: [
               Task(
-                  'Estudar hoje a noite no liberato aquela aula chata de gestão'),
-              Task('Academia'),
-              Task('Janta'),
-              Task('Ingles'),
-              Task('Consulta'),
-              Task('Arrumar roupas'),
-              Task('Remedio'),
+                  'Estudar hoje a noite no liberato aquela aula chata de gestão', 
+                  'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
+              Task('Academia','https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
+              Task('Janta','https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
+              Task('Ingles','https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
+              Task('Consulta','https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
+              Task('Arrumar roupas','https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
+              Task('Remedio','https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
               //Todas essas Strings dentro dos paramentros
               //da task é aquela váriavel "nome" que eu criei na classe
             ],
@@ -45,7 +46,9 @@ class MyApp extends StatelessWidget {
 
 class Task extends StatefulWidget {
   final String nome; //criei essa váriavel
-  const Task(this.nome, {super.key});
+  final String foto;
+
+  const Task(this.nome,this.foto ,{super.key});
   @override
   State<Task> createState() => _TaskState();
 }
@@ -71,28 +74,39 @@ class _TaskState extends State<Task> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-
-
-
-                      
-                      Container(
+                     Container(
                         color: Colors.black26,
                         width: 72,
                         height: 100,
-                        child: Image.network('https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
-                        /**Nosso image.network tem esse parametro --SRC-- que é uma String onde colocamos 
-                         * a URL. Ele é um parametro OBRIGATÓRIO. Sem ele não há imagem. */
+                        child: Image.network(
+                          widget.foto,//OBJETO CRIADO
+                        fit: BoxFit.cover,  
+                        ),
+                        
                       ),
-
-
-
-                      Container(
-                          width: 200,
-                          child: Text(
-                            widget.nome,
-                            style: TextStyle(
-                                fontSize: 24, overflow: TextOverflow.ellipsis),
-                          )),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                              width: 200,
+                              child: Text(
+                                widget.nome,
+                                style: TextStyle(
+                                    fontSize: 24, 
+                                    overflow: TextOverflow.ellipsis),
+                              )),
+                              Row(
+                                children: [
+                                  Icon(Icons.star, size: 15, color: Colors.blue,),
+                                  Icon(Icons.star, size: 15, color: Colors.blue,),
+                                  Icon(Icons.star, size: 15, color: Colors.blue,),
+                                  Icon(Icons.star, size: 15, color: Colors.blue[100],),
+                                  Icon(Icons.star, size: 15, color: Colors.blue[100],),
+                                ],
+                              ),
+                        ],
+                      ),
                       Container(
                         height: 72, width: 72,
                         child: ElevatedButton(
