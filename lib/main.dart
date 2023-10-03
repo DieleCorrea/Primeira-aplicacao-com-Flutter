@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 //import 'package:segundoapp/revisao.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 ////void main() {
  // runApp(revisao());
 // }
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   MyApp({super.key});
+
+  bool opacidade = true;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
             title: Text('Tarefas'),
           ),
           body: AnimatedOpacity(
-            opacity: 0,
+            opacity: opacidade ? 1 : 0,
             duration: Duration(milliseconds: 800),
             child: ListView(
               children: [
@@ -59,7 +61,11 @@ class MyApp extends StatelessWidget {
               ],
             ),
           ),
-          floatingActionButton: FloatingActionButton(onPressed: () {}),
+          floatingActionButton: FloatingActionButton(onPressed: () {
+            opacidade = !opacidade;
+          },
+          child: Icon(Icons.remove_red_eye),
+          ),
         ));
   }
 }
