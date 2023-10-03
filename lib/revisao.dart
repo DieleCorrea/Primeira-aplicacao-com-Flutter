@@ -27,20 +27,25 @@ class revisao extends StatelessWidget {
                 width: 500,
                 child: Column(
                   children: [
-                        Container(
-                          color: const Color.fromARGB(255, 198, 109, 139),
-                          height: 200,
-                          width: 300,
-                          child: Text(
-                            'augdiuagsduiad',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                            ),
-                          ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(4),
+                        color: const Color.fromARGB(255, 198, 109, 139),
+                      ),
+                      height: 200,
+                      width: 300,
+                      child: Text(
+                        'augdiuagsduiad',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
                         ),
-                        ElevatedButton(onPressed: (){},
-                        child: Text('aperte') ,)
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text('aperte'),
+                    )
                   ],
                 ),
               ),
