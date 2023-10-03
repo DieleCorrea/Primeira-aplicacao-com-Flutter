@@ -53,8 +53,6 @@ class MyApp extends StatelessWidget {
                   'Remedio',
                   'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
                   3),
-              //Todas essas Strings dentro dos paramentros
-              //da task é aquela váriavel "nome" que eu criei na classe
             ],
           ),
           floatingActionButton: FloatingActionButton(onPressed: () {}),
@@ -88,7 +86,8 @@ class _TaskState extends State<Task> {
             Column(
               children: [
                 Container(
-                  color: Color.fromARGB(255, 190, 148, 179),
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(4),
+                  color: Color.fromARGB(255, 241, 205, 233), ),
                   height: 100,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -176,8 +175,10 @@ class _TaskState extends State<Task> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         child: LinearProgressIndicator(
-                          color: Colors.red,
-                          value: nivel / 10,
+                          color: Colors.pink,
+                          value: (nivel>0)?
+                          (nivel/widget.dificuldade) / 10 
+                          : 1,
                         ),
                         width: 150,
                       ),
