@@ -8,9 +8,14 @@ void main() {
 ////void main() {
  // runApp(revisao());
 // }
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
    MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   bool opacidade = true;
 
   @override
@@ -62,7 +67,10 @@ class MyApp extends StatelessWidget {
             ),
           ),
           floatingActionButton: FloatingActionButton(onPressed: () {
-            opacidade = !opacidade;
+            setState(() {
+                opacidade = !opacidade;
+            });
+          
           },
           child: Icon(Icons.remove_red_eye),
           ),
