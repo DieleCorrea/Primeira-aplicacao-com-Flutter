@@ -96,7 +96,7 @@ class MyFirstWidget extends StatelessWidget {
               ElevatedButton(
                 onPressed: (){
                   /*Criei uma função anonima*/
-                  print('Você apertou o Botão');
+                 // print('Você apertou o Botão');
                 }, 
                 
                 child: const Text('Aperte o botão'),),

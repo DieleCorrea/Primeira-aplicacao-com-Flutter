@@ -4,7 +4,7 @@ import 'package:segundoapp/screens/initial_scream.dart';
 //import 'package:segundoapp/revisao.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(const MyApp());
 }
 
 ////void main() {
@@ -19,10 +19,10 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
-              seedColor: Color.fromARGB(255, 224, 217, 221)),
+              seedColor: const Color.fromARGB(255, 224, 217, 221)),
           useMaterial3: true, 
         ),
-        home: InittialScream(),
+        home: const InittialScream(),
         );
   }
 }

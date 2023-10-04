@@ -15,13 +15,13 @@ class _InittialScreamState extends State<InittialScream> {
     return Scaffold(
           appBar: AppBar(
             leading: Container(),
-            title: Text('Tarefas'),
+            title: const Text('Tarefas'),
           ),
           body: AnimatedOpacity(
             opacity: opacidade ? 1 : 0,
-            duration: Duration(milliseconds: 800),
+            duration: const Duration(milliseconds: 800),
             child: ListView(
-              children: [
+              children: const [
                 Task(
                     'Bike',
                     'assets/images/bike.jpg',
@@ -50,7 +50,7 @@ class _InittialScreamState extends State<InittialScream> {
             });
           
           },
-          child: Icon(Icons.remove_red_eye),
+          child: const Icon(Icons.remove_red_eye),
           ),
         );
   }
