@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:segundoapp/difficulty.dart';
+import 'package:segundoapp/components/difficulty.dart';
 
 
 class Task extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:segundoapp/initial_scream.dart';
+import 'package:segundoapp/screens/initial_scream.dart';
 
 //import 'package:segundoapp/revisao.dart';
 
