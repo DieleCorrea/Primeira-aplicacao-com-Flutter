@@ -23,31 +23,23 @@ class _InittialScreamState extends State<InittialScream> {
             child: ListView(
               children: [
                 Task(
-                    'Estudar hoje a noite no liberato aquela aula chata de gestão',
-                    'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
+                    'Bike',
+                    'assets/images/bike.jpg',
                     2),
                 Task(
                     'Academia',
-                    'https://tswbike.com/wp-content/uploads/2020/09/108034687_626160478000800_2490880540739582681_n-e1600200953343.jpg',
+                    'assets/images/bichinho.png',
                     3),
                 Task(
                     'Janta',
-                    'https://manhattanmentalhealthcounseling.com/wp-content/uploads/2019/06/Top-5-Scientific-Findings-on-MeditationMindfulness-881x710.jpeg',
+                    'assets/images/img3.jpg',
                     2),
                 Task('Ingles',
-                    'https://i.ibb.co/tB29PZB/kako-epifania-2022-2-c-pia.jpg', 4),
+                    'assets/images/img4.jpeg', 4),
                 Task(
                     'Consulta',
-                    'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
+                    'assets/images/img5.jpg',
                     1),
-                Task(
-                    'Arrumar roupas',
-                    'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
-                    5),
-                Task(
-                    'Remedio',
-                    'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
-                    3),
                     SizedBox(height: 80,)
               ],
             ),
