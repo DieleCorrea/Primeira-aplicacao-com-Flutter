@@ -48,7 +48,7 @@ class _InittialScreamState extends State<InittialScream> {
                     'Remedio',
                     'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
                     3),
-                    Container()
+                    SizedBox(height: 80,)
               ],
             ),
           ),
