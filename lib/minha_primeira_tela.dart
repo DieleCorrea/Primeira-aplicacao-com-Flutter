@@ -103,7 +103,7 @@ class MyFirstWidget extends StatelessWidget {
 
             ],
           ),
-        ), 
+        );
         ;
   }
 }
