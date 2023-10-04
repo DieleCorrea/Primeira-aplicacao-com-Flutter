@@ -28,7 +28,7 @@ class _InittialScreamState extends State<InittialScream> {
                     2),
                 Task(
                     'Academia',
-                    'assets/images/bichinho.png',
+                    'assets/images/bixinho.png',
                     3),
                 Task(
                     'Janta',
