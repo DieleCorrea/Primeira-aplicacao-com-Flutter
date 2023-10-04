@@ -18,7 +18,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool opacidade = true;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +28,25 @@ class _MyAppState extends State<MyApp> {
           colorScheme: ColorScheme.fromSeed(
               seedColor: Color.fromARGB(255, 224, 217, 221)),
           useMaterial3: true,
+          //home 
         ),
-        home: Scaffold(
+        );
+  }
+}
+
+class InittialScream extends StatefulWidget {
+
+  const InittialScream({super.key});
+  
+  @override
+  State<InittialScream> createState() => _InittialScreamState();
+}
+
+class _InittialScreamState extends State<InittialScream> {
+  bool opacidade = true;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
           appBar: AppBar(
             leading: Container(),
             title: Text('Tarefas'),
@@ -76,6 +93,6 @@ class _MyAppState extends State<MyApp> {
           },
           child: Icon(Icons.remove_red_eye),
           ),
-        ));
+        );
   }
 }
