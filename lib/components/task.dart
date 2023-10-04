@@ -33,7 +33,7 @@ class _TaskState extends State<Task> {
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(4),
-                    color: Color.fromARGB(255, 241, 205, 233),
+                    color: const Color.fromARGB(255, 241, 205, 233),
                   ),
                   height: 100,
                   child: Row(
@@ -62,7 +62,7 @@ class _TaskState extends State<Task> {
                               width: 200,
                               child: Text(
                                 widget.nome,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 24,
                                     overflow: TextOverflow.ellipsis),
                               )),
@@ -78,7 +78,7 @@ class _TaskState extends State<Task> {
                                 nivel++;
                               });
                             },
-                            child: Column(
+                            child: const Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [

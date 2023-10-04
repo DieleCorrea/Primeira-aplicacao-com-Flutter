@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class revisao extends StatelessWidget {
-  const revisao({Key? key}) : super(key: key);
+class Revisao extends StatelessWidget {
+  const Revisao({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,20 +9,20 @@ class revisao extends StatelessWidget {
         title: 'revisão do que aprendi',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
-              seedColor: Color.fromARGB(255, 158, 102, 134)),
+              seedColor: const Color.fromARGB(255, 158, 102, 134)),
           useMaterial3: true,
         ),
         home: Scaffold(
           //estrutura do meu app
           appBar: AppBar(
-            title: Text('Testandp App'),
+            title: const Text('Testandp App'),
           ),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                color: Color.fromARGB(255, 134, 63, 156),
+                color: const Color.fromARGB(255, 134, 63, 156),
                 height: 600,
                 width: 500,
                 child: Column(
@@ -34,7 +34,7 @@ class revisao extends StatelessWidget {
                       ),
                       height: 200,
                       width: 300,
-                      child: Text(
+                      child: const Text(
                         'augdiuagsduiad',
                         style: TextStyle(
                           color: Colors.black,
@@ -44,7 +44,7 @@ class revisao extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text('aperte'),
+                      child: const Text('aperte'),
                     )
                   ],
                 ),
@@ -55,14 +55,14 @@ class revisao extends StatelessWidget {
   }
 }
 
-class tarefa extends StatefulWidget {
-  const tarefa({super.key});
+class Tarefa extends StatefulWidget {
+  const Tarefa({super.key});
 
   @override
-  State<tarefa> createState() => _tarefaState();
+  State<Tarefa> createState() => _TarefaState();
 }
 
-class _tarefaState extends State<tarefa> {
+class _TarefaState extends State<Tarefa> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();

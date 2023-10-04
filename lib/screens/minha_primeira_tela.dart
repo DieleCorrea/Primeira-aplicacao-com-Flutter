@@ -30,7 +30,7 @@ class MyFirstWidget extends StatelessWidget {
                 color: Colors.white,
                 width: 500,
                 height: 100,
-                child: Text(
+                child: const Text(
                     'aaaaaaa',
                    
                 ),
@@ -81,11 +81,11 @@ class MyFirstWidget extends StatelessWidget {
                 ],
               ),
               Container(//texto
-                color: Color.fromARGB(255, 219, 150, 174),
+                color: const Color.fromARGB(255, 219, 150, 174),
                 width: 300,
                 height: 30,
                 //Inserir texto crio um filho widget chamado text
-                child: Text(
+                child: const Text(
                   'Diamante amarelo',
                   style: TextStyle(//estilo do texto 
                   color: Colors.black,//cor texto
@@ -99,7 +99,7 @@ class MyFirstWidget extends StatelessWidget {
                   print('Você apertou o Botão');
                 }, 
                 
-                child: Text('Aperte o botão'),),
+                child: const Text('Aperte o botão'),),
 
             ],
           ),
